@@ -72,6 +72,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 //@import "base/base";
 
+.entry-title {
+	a {
+		@extend .text-mono-b
+	}
+}
+
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/

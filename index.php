@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The main template file
  *
@@ -14,44 +15,53 @@
 
 get_header();
 ?>
+<?php if (has_post_thumbnail(get_queried_object_id())) { ?>
+	<img src="<?php echo get_the_post_thumbnail_url(get_queried_object_id(), "monodedotheme-full-whith");
+				?>" class="img-fluid d-none d-md-block" width="100%">
+<?php } ?>
+<div class="container">
+	<div class="row">
+		<main id="primary" class="site-main col-md-9">
 
-	<main id="primary" class="site-main">
+			<?php
+			if (have_posts()) :
 
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+				if (is_home() && !is_front_page()) :
+			?>
+					<header>
+						<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+					</header>
 				<?php
-			endif;
+				endif;
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+				/* Start the Loop */
+				while (have_posts()) :
+					the_post();
 
-				/*
+					/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+					get_template_part('template-parts/content', get_post_type());
 
-			endwhile;
+				endwhile;
+				?>
+				<div class="card-body text-mono-b-pag">
+					<?php get_template_part('template-parts/content', 'paginacion') ?>
+				</div>
+			<?php
+			else :
 
-			the_posts_navigation();
+				get_template_part('template-parts/content', 'none');
 
-		else :
+			endif;
+			?>
 
-			get_template_part( 'template-parts/content', 'none' );
+		</main><!-- #main -->
+		<?php get_sidebar(); ?>
 
-		endif;
-		?>
-
-	</main><!-- #main -->
-
+	</div><!-- .row -->
+</div><!-- .container -->
 <?php
-get_sidebar();
 get_footer();

@@ -156,6 +156,12 @@ function monodedotheme_scripts()
 }
 add_action('wp_enqueue_scripts', 'monodedotheme_scripts');
 
+
+/**
+ * Custom thumbnail size.
+ */
+add_image_size('monodedotheme-full-whith', 1980, 9999, array('left', 'top'));
+
 /**
  * Implement the Custom Header feature.
  */

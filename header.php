@@ -24,7 +24,7 @@
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-	<div id="page" class="site row">
+	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'monodedotheme'); ?></a>
 
 		<header id="masthead" class="site-header col-12">
@@ -68,3 +68,4 @@
 				</div>
 			</nav><!-- #site-navigation -->
 		</header><!-- #masthead -->
+		<div class="py-4 my-2"></div>

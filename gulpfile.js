@@ -38,14 +38,14 @@ gulp.task('js', function () {
 });
 
 // Static Server + watching scss/html files
-gulp.task('serve', gulp.series(['sass_b', 'sass_w'], function () {
+gulp.task('serve', gulp.series(['sass_w'], function () {
 
     browserSync.init({
         proxy: 'http://localhost/wordpress'
     });
 
-    gulp.watch(['bootstrap.sass/**/*.scss'], gulp.series('sass_b'));
-    gulp.watch(['sass/**/*.scss'], gulp.series('sass_w'));
+    //gulp.watch(['bootstrap.sass/**/*.scss'], gulp.series('sass_b'));
+    gulp.watch(['sass/**/*.scss', 'bootstrap.sass/**/*.scss'], gulp.series('sass_w'));
     gulp.watch('**/*.*').on('change', browserSync.reload);
 }));
 

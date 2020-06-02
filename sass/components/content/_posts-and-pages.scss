@@ -2,9 +2,18 @@
 	display: block;
 }
 
-.post,
+.post {
+	@extend .my-5;
+}
+
 .page {
 	margin: 0 0 0;
+}
+
+.entry-meta {
+	span {
+		font-size: smaller;
+	}
 }
 
 .updated:not(.published) {
@@ -20,4 +29,9 @@
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.more-link {
+	@extend .btn;
+	@extend .btn-mono-r;
 }
