@@ -5,3 +5,25 @@
 .bypostauthor {
 	display: block;
 }
+
+.cart {
+	@extend .form-group;
+
+	input {
+		@extend .form-control;
+	}
+
+	button {
+		@extend .btn;
+		@extend .btn-mono-r;
+	}
+}
+
+.related {
+	.products {
+
+		li {
+			@extend .px-5;
+		}
+	}
+}
