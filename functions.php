@@ -157,6 +157,30 @@ function monodedotheme_scripts()
 add_action('wp_enqueue_scripts', 'monodedotheme_scripts');
 
 
+
+///Agregar log-in y log-out
+add_filter('wp_nav_menu_items', 'dcms_items_login_logout', 10, 2);
+
+function dcms_items_login_logout($items, $args)
+{
+
+	if ($args->theme_location == 'Primary') {
+		if (is_user_logged_in()) {
+			$items .= '<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-239 nav-item">
+						<a class="nav-link" href="' . wp_logout_url(get_permalink()) . '">' . __("Log Out") . '</a>
+						</li>';
+		} else {
+			$items .= '<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-239 nav-item">
+						<a class="nav-link" href="' . wp_login_url(get_permalink()) . '">' . __("Log In") . '</a>
+						</li>';
+		}
+	}
+
+	return $items;
+}
+
+
+
 /**
  * Custom thumbnail size.
  */
