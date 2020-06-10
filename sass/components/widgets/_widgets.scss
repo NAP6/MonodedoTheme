@@ -245,6 +245,15 @@
 	}
 }
 
+
+.onsale {
+	background-color: #c33;
+	padding: 0.3em;
+	position: absolute;
+	color: #fff !important;
+
+}
+
 .products {
 	li {
 		:hover {
@@ -255,10 +264,13 @@
 			color: white;
 
 			.onsale {
-				background-color: #c33;
-				padding: 0.3em;
-				position: absolute;
+				@extend .onsale;
 			}
 		}
 	}
+}
+
+.woocommerce-product-gallery__trigger {
+	position: relative;
+	float: right;
 }

@@ -1,3 +1,9 @@
+.woocommerce img,
+.woocommerce-page img {
+	height: auto;
+	max-width: 100%;
+}
+
 ul.products {
 	margin: 0;
 	padding: 0;
@@ -9,6 +15,7 @@ ul.products {
 
 		img {
 			display: block;
+
 		}
 
 		.button {
@@ -52,7 +59,7 @@ ul.products {
 
 			li.product {
 
-				@include column-width( $i );
+				@include column-width($i);
 			}
 
 		}

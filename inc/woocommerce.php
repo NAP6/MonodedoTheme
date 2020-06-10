@@ -232,7 +232,7 @@ if (!function_exists('monodedotheme_woocommerce_header_cart')) {
 				?>
 			</li>
 		</ul>
-	<?php
+<?php
 	}
 }
 
@@ -298,7 +298,7 @@ if (!function_exists('monodedotheme_woocommerce_menu')) {
 
 
 // Desactivar anchos de imágenes en temas con soporte para WooCommerce.
-/* add_action('after_setup_theme', 'ap_modify_theme_support', 11);
+add_action('after_setup_theme', 'ap_modify_theme_support', 11);
 function ap_modify_theme_support()
 {
 	$theme_support = get_theme_support('woocommerce');
@@ -306,17 +306,17 @@ function ap_modify_theme_support()
 	unset($theme_support['single_image_width'], $theme_support['thumbnail_image_width']);
 	remove_theme_support('woocommerce');
 	add_theme_support('woocommerce', $theme_support);
-} */
+}
 
 function imagen_de_producto()
 {
 	wc_get_template('loop/sale-flash.php');
-	//echo woocommerce_get_product_thumbnail();
-	?>
+	echo woocommerce_get_product_thumbnail();
+	/* ?>
 	<?php if (has_post_thumbnail(get_queried_object_id())) { ?>
 		<img src="<?php echo get_the_post_thumbnail_url(get_queried_object_id(), "monodedotheme-full-whith");
-					?>" class="img-fluid">
-<?php }
+					?>" class="img-fluid"> 
+<?php }*/
 }
 
 //Desactivar los botones de la tienda
