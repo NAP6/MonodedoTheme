@@ -21,14 +21,14 @@ get_header();
 
 ?>
 
-<div class="container-fluid">
-    <div class="row">
-        <aside class="col-md-2 mono-menu-tienda">
-            <div class="card-body">
+<div class="container-fluid  bg-mono-b">
+    <div class="row p-5">
+        <aside class="col-lg-2">
+            <div class="card-body  mono-menu-tienda">
                 <?php monodedotheme_woocommerce_menu(); ?>
             </div>
         </aside>
-        <main class="col-md-10">
+        <main class="col-lg-10">
             <?php
 
             /**
@@ -38,7 +38,7 @@ get_header();
              * @hooked woocommerce_breadcrumb - 20
              * @hooked WC_Structured_Data::generate_website_data() - 30
              */
-            do_action('woocommerce_before_main_content');
+            //do_action('woocommerce_before_main_content');
 
             ?>
 
@@ -70,7 +70,7 @@ get_header();
                                  */
                                 do_action('woocommerce_shop_loop');
 
-                                wc_get_template_part('content', 'product');
+                                wc_get_template_part('template-parts/content', 'product');
                             }
                         }
 
