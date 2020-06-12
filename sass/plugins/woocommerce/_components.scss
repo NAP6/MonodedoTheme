@@ -55,7 +55,7 @@
 		top: 0;
 		position: absolute;
 		left: 0;
-		color: $color__link;
+		color: #878786;
 	}
 }
 
@@ -103,7 +103,7 @@ p.stars {
 
 			&::before {
 				content: "\53";
-				color: $color__link;
+				color: #878786;
 				opacity: 1;
 			}
 		}
@@ -115,7 +115,7 @@ p.stars {
 
 			&::before {
 				content: "\53";
-				color: $color__link;
+				color: #878786;
 				opacity: 1;
 			}
 
@@ -130,7 +130,7 @@ p.stars {
 
 			&::before {
 				content: "\53";
-				color: $color__link;
+				color: #878786;
 				opacity: 1;
 			}
 		}
@@ -140,7 +140,7 @@ p.stars {
 /**
  * Tabs
  */
-.woocommerce-tabs {
+/* .woocommerce-tabs {
 
 	ul.tabs {
 		list-style: none;
@@ -149,7 +149,7 @@ p.stars {
 		text-align: left;
 
 		li {
-			display: block;
+			//display: block;
 			margin: 0;
 			position: relative;
 
@@ -158,15 +158,15 @@ p.stars {
 				display: block;
 			}
 		}
-	}
+	} 
 
-	.panel {
+.panel {
 
-		h2:first-of-type {
-			margin-bottom: 1em;
-		}
+	h2:first-of-type {
+		margin-bottom: 1em;
 	}
 }
+}*/
 
 /**
  * Password strength meter
@@ -218,14 +218,14 @@ p.stars {
 /**
  * Notices
  */
-.woocommerce-message,
+/* .woocommerce-message,
 .woocommerce-info,
 .woocommerce-error,
 .woocommerce-noreviews,
 p.no-comments {
 	background-color: $woocommerce__color-success;
 	clear: both;
-}
+} */
 
 .woocommerce-info,
 .woocommerce-noreviews,

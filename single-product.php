@@ -49,7 +49,7 @@ get_header(); ?>
 			do_action('woocommerce_after_main_content');
 			?></div>
 		<?php get_sidebar(); ?>
-	</div>
+
 </main>
 <?php
 get_footer();
