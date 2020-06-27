@@ -21,7 +21,7 @@ get_header();
 <?php } ?>
 <div class="container">
 	<div class="row">
-		<main id="primary" class="site-main col-md-9">
+		<main id="primary" class="site-main col-12 col-md-9">
 
 			<?php
 			if (have_posts()) :

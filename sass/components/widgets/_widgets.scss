@@ -705,6 +705,15 @@ p.no-comments {
 	list-style: none outside;
 	width: auto;
 	word-wrap: break-word;
+
+
+}
+
+.woocommerce-NoticeGroup {
+	.woocommerce-error {
+		background-color: #f7f6f7;
+		text-align: left;
+	}
 }
 
 .woocommerce-error::before,
@@ -826,6 +835,10 @@ p.no-comments {
 .woocommerce-checkout table.cart .product-thumbnail {
 	min-width: 32px;
 	max-height: 100%;
+
+	@media (min-width: 767.98px) {
+		width: 7rem;
+	}
 }
 
 #add_payment_method table.cart td,
@@ -962,11 +975,6 @@ p.no-comments {
 	text-align: right;
 }
 
-.woocommerce .cart-collaterals .cart_totals,
-.woocommerce-page .cart-collaterals .cart_totals {
-	float: right;
-	width: 48%;
-}
 
 .woocommerce .cart-collaterals::after,
 .woocommerce-page .cart-collaterals::after {
@@ -1104,9 +1112,148 @@ p.no-comments {
 }
 
 .cross-sells {
-	@extend .col-12;
-
 	a.woocommerce-LoopProduct-link {
 		color: $monodedo-gris;
+	}
+}
+
+.cart-collaterals {
+
+	@include clearfix();
+	@extend .row;
+
+	.cross-sells {
+		@extend .col-md-6;
+		@extend .d-none;
+		@extend .d-md-block;
+
+		ul.products {
+			float: none;
+
+			li {
+				width: 48%;
+			}
+		}
+
+	}
+
+	.cart_totals {
+		@extend .col-md-6;
+	}
+}
+
+
+
+form {
+
+	.col2-set {
+		@extend .row;
+
+		.col-1 {
+			@extend .col-12;
+			@extend .col-md-6;
+			@extend .card-body;
+		}
+
+		.col-2 {
+			@extend .col-12;
+			@extend .col-md-6;
+		}
+	}
+
+
+	p.form-row {
+		@extend .row;
+
+
+
+		button {
+			@extend .btn;
+			@extend .btn-mono-b;
+		}
+
+		input,
+		select,
+		textarea {
+			@extend .form-control;
+		}
+
+		>label {
+			@extend .col-12;
+		}
+
+		>span {
+			@extend .col-12;
+
+			.select2 {
+				.select2-selection {
+					height: calc(1.5em + .75rem + 2px);
+				}
+
+				.select2-selection__arrow {
+					height: calc(1.5em + .75rem + 2px);
+				}
+			}
+		}
+	}
+}
+
+.woocommerce-checkout-payment {
+	border-radius: 5px;
+	background-color: #878786;
+	color: #fff !important;
+
+	a {
+		color: $monodedo-negro;
+
+		&:hover {
+			color: $monodedo-rojo;
+		}
+	}
+
+	ul.wc_payment_methods {
+		text-align: left;
+		padding: 1em;
+		border-bottom: 1px solid #d3ced2;
+		margin: 0;
+		list-style: none outside;
+
+		li.wc_payment_method {
+			line-height: 2;
+			text-align: left;
+			margin: 0;
+			font-weight: 400;
+
+			.payment_box {
+				position: relative;
+				box-sizing: border-box;
+				width: 100%;
+				padding: 1em;
+				margin: 1em 0;
+				font-size: .92em;
+				border-radius: 2px;
+				line-height: 1.5;
+				background-color: #dfdcde;
+				color: #515151;
+
+				::before {
+					content: "";
+					display: block;
+					border: 1em solid #dfdcde;
+					border-right-color: transparent;
+					border-left-color: transparent;
+					border-top-color: transparent;
+					position: absolute;
+					top: -.75em;
+					left: 0;
+					margin: -1em 0 0 2em;
+				}
+			}
+		}
+	}
+
+	.place-order {
+		padding: 1em;
+		margin: 0 0 6px;
 	}
 }

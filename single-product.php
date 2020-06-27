@@ -21,7 +21,7 @@ get_header(); ?>
 
 <main class="container">
 	<div class="row">
-		<div class="col-lg-9">
+		<div class="col-12 col-lg-9">
 			<?php
 			/**
 			 * woocommerce_before_main_content hook.
