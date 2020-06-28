@@ -12,23 +12,23 @@
 
 ?>
 
-<footer class="container-fluid py-4 text-center row text-light bg-mono-b">
+<footer class="py-4 text-center row text-light bg-mono-b">
 	<h4 class="col-12 text-center">Contacto</h4>
 	<div class="col-lg-6">
-		<div class="container row">
-			<div class="col-12 py-3">
-				<a href="https://www.facebook.com/SenderismoMonodedo" class="text-white"> <i class="fab fa-facebook-f fa-2x mx-2"></i> Encuentranos en Facebook Monodedo Cuenca</a>
-			</div>
-			<div class="col-12 py-3">
-				<a href="https://www.instagram.com/monodedocuenca/?hl=es-la" class="text-white"> <i class="fab fa-instagram fa-2x mx-2"></i> Encuentranos en instagram monodedocuenca</a>
-			</div>
-			<div class="col-12 py-3">
-				<p href="#" class="text-white"> <i class="fab fa-whatsapp fa-2x mx-2"></i> Escribenos a Whatsapp: 099 724 5870 / 099 866 115</p>
-			</div>
-			<div class="col-12 py-3">
-				<p href="#" class="text-white"> <i class="fas fa-paper-plane fa-2x mx-2"></i> Escribenos un correo: cuenca@monodedo.com</p>
-			</div>
-		</div>
+		<ul class="" style="list-style: none;text-align: left;">
+			<li class="fo">
+				<a href="https://www.facebook.com/SenderismoMonodedo" class="text-white"> <i class="fab fa-facebook-f fa-2x mx-2 min-x"></i> Encuentranos en Facebook Monodedo Cuenca</a>
+			</li>
+			<li class="fo">
+				<a href="https://www.instagram.com/monodedocuenca/?hl=es-la" class="text-white"> <i class="fab fa-instagram fa-2x mx-2 min-x"></i> Encuentranos en instagram monodedocuenca</a>
+			</li>
+			<li class="fo">
+				<a href="#" class="text-white"> <i class="fab fa-whatsapp fa-2x mx-2 min-x"></i> Escribenos a Whatsapp: 099 724 5870 / 099 866 115</a>
+			</li>
+			<li class="fo">
+				<a href="#" class="text-white"> <i class="fas fa-paper-plane fa-2x mx-2 min-x"></i> Escribenos un correo: cuenca@monodedo.com</a>
+			</li>
+		</ul>
 	</div>
 	<div class="col-lg-6 px-5 card-body">
 		<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 250px">
