@@ -555,6 +555,7 @@ p.no-comments {
 				a {
 					color: $monodedo-rojo;
 					font-weight: 500;
+					width: 100%;
 
 					:hover {
 						color: $monodedo-gris;
@@ -1265,5 +1266,64 @@ footer {
 
 	.min-x {
 		width: 2rem;
+	}
+}
+
+.nav-previous,
+.nav-next {
+	a {
+		@extend .btn;
+		@extend .btn-mono-g;
+	}
+}
+
+.entry-footer {
+
+	a {
+		//@extend .btn;
+		//@extend .btn-mono-g;
+		@extend .mb-4;
+		@extend .mr-2;
+	}
+}
+
+.buscar-404 {
+	label {
+		width: 100%;
+	}
+
+	input {
+
+		@extend .form-control;
+	}
+
+	input[type="submit"] {
+		@extend .btn;
+		@extend .btn-mono-g;
+	}
+}
+
+.widget_archive {
+	select {
+		@extend .form-control;
+	}
+}
+
+#commentform {
+
+
+	p {
+
+		input,
+		select,
+		textarea {
+			@extend .form-control;
+		}
+
+
+		input[type="submit"] {
+			@extend .btn;
+			@extend .btn-mono-b;
+		}
 	}
 }

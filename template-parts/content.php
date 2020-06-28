@@ -12,7 +12,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php monodedotheme_post_thumbnail(); ?>
+	<?php
+	if (!is_single()) {
+		monodedotheme_post_thumbnail();
+	}
+	?>
 
 	<header class="entry-header">
 		<?php
@@ -45,7 +49,7 @@
 		if (!is_singular()) {
 			the_excerpt();
 		?>
-			<a href="<?php the_permalink(); ?>" class="btn btn-danger bg-m-r">Mas info...</a>
+			<a href="<?php the_permalink(); ?>" class="btn btn-mono-g bg-mono-g">Mas info...</a>
 		<?php
 		} else {
 			the_content(

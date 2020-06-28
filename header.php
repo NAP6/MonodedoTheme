@@ -27,7 +27,7 @@
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'monodedotheme'); ?></a>
 
-		<header id="masthead" class="site-header col-12">
+		<header id="masthead" class="site-header">
 			<nav id="menu" class="navbar navbar-dark navbar-expand-lg bg-mono-b fixed-top" role="navigation">
 				<div class="container-fluid">
 					<!-- <div class="site-branding navbar-brand"> -->
@@ -48,7 +48,7 @@
 					}
 					?>
 					<!--</div> .site-branding -->
-					?>
+
 
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
