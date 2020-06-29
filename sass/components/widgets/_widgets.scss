@@ -1327,3 +1327,20 @@ footer {
 		}
 	}
 }
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+.pt-sans {
+	font-family: 'PT Sans', sans-serif;
+}
+
+@font-face {
+	font-family: "oswald-blod";
+	src: url(webfonts/Oswald-Bold.ttf), url(webfonts/Oswald-Bold.woff), url(webfonts/Oswald-Bold.eot), url(webfonts/Oswald-Bold.otf);
+}
+
+.oswald,
+h1,
+h2 {
+	font-family: 'oswald-blod';
+}
