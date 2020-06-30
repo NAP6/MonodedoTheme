@@ -160,7 +160,7 @@ add_action('wp_enqueue_scripts', 'monodedotheme_scripts');
 
 
 ///Agregar log-in y log-out
-add_filter('wp_nav_menu_items', 'dcms_items_login_logout', 10, 2);
+/* add_filter('wp_nav_menu_items', 'dcms_items_login_logout', 10, 2);
 
 function dcms_items_login_logout($items, $args)
 {
@@ -178,7 +178,7 @@ function dcms_items_login_logout($items, $args)
 	}
 
 	return $items;
-}
+} */
 
 
 

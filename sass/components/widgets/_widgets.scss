@@ -1344,3 +1344,17 @@ h1,
 h2 {
 	font-family: 'oswald-blod';
 }
+
+.comment-respond {
+	#commentform {
+		.comment-form-cookies-consent {
+			@extend .custom-control;
+			@extend .custom-checkbox;
+
+			input {
+				width: auto;
+				height: auto;
+			}
+		}
+	}
+}
